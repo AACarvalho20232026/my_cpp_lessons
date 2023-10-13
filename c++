@@ -21,3 +21,43 @@ cout  << PI << " valor de PI\n";  //isto é um comentario
 cout << "Digita um numero: " ;  //imprime no ecrã
    cin >> numero;                   //lê do teclado 
    cout << "O numero que digitaste foi; " << numero << endl;
+#include <iostream>
+using namespace std;
+
+
+
+
+//tipo de variavel nome da variavel = valor da variavel 
+
+
+int main()
+{
+      //tendo em consideração que a area do circulo
+      //é PI * raio * raio, calcular a area do circulo
+      //com raio 10
+      const double PI = 3.14159265389793238463
+      int r = 10;
+      double area = PI * r * r;
+   cout << a+b << endl;   //imprime no ecrã
+   //cin >> numero;                   //lê do teclado 
+   //cout << "O numero que digitaste foi; " << numero << endl;
+   return 0;
+}
+const double PI = 3.14159265389793238463
+      int raio;
+      cout << "Qual o raio do circulo?" << endl;
+      cin >> raio;
+      double area = PI * raio * raio;
+      int a = 4;
+      int b = 5;
+      int c = 2 ;
+      int d = 1;
+      int resultado = a+(b*c)+d;
+      cout << resultado << endl;
+      int resultado = a/c;
+      int resultado = a%c;
+int resultado = a+=2;
+      cout << resultado << endl;
+       resultado = a+=2 ;
+      cout << resultado << endl;
+      
