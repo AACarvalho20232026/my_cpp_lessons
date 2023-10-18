@@ -60,4 +60,53 @@ int resultado = a+=2;
       cout << resultado << endl;
        resultado = a+=2 ;
       cout << resultado << endl;
-      
+ #include <cmath>
+#include <iostream>  //incluir uma bibliotece
+#include <cmath>     //incluir uma bibliteca cheia de cenas de mat
+using namespace std;
+
+int a=2, b=3;
+
+
+
+
+
+
+int main(){
+
+   cout << max(a,b)  << endl;
+   return 0;
+}
+#include "asminhascontas.h"
+cout << log(16)  << endl;
+   cout << f(2) << endl;
+int f(int x){
+    int resp = 2*x;
+    return resp;
+      #include <iostream>
+using namespace std;
+
+int a = 10 , b = 12;
+
+int main(){
+
+    if ( a < b){
+        cout << "é verdade" <<endl;
+
+    }else{
+        cout << "é mentira" << endl;
+    
+    }
+
+    return 0;
+int a = 10 , b = 12, c = 9;
+
+int main(){
+
+    if ( a < b && b < c){
+if ( a < b ){
+        cout << "é verdade" <<endl;
+    }else if (a<c){
+        cout << "é verdade" <<endl;
+    }else{
+        cout << "é mentira" << endl;
