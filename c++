@@ -196,3 +196,20 @@ int main(){
     for(int i=0; i<4; i++){
         cout << test[i] << endl;
     }
+.....................................................................
+int main(){
+ // indice             0        1       2       3          4
+   string cars[] = {"volvo", "BMW", "ford", "mazda", "tesla"};
+    cout << cars[2] << "\n";
+    cars[2] = "Opel";
+    cout << cars[2] << "\n";
+
+    
+
+    cout << cars[2] << "\n";
+
+int main(){
+ 
+ int numeros[] = {1,2,3,4,5};
+ cout << sizeof(numeros)/4 << endl;
+
