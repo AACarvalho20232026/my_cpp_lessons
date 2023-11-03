@@ -212,4 +212,7 @@ int main(){
  
  int numeros[] = {1,2,3,4,5};
  cout << sizeof(numeros)/4 << endl;
+// cada elemento de um array = 4 bytes
+....................................................
+    
 
