@@ -344,4 +344,43 @@ int main(){
 
     cout << multiplicaçao(2) << endl;
 
+const int LED_RED = A5;
+const int LED_YEL = A4;
+const int LED_GRE = A3;
+const long INTERVALO = 2000;
+
+void setup()
+{
+  pinMode(LED_RED, OUTPUT);
+  pinMode(LED_YEL, OUTPUT);
+  pinMode(LED_GRE, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(A5, HIGH);
+  delay(2000);
+  digitalWrite(A5, LOW);
+  delay(2000);
+
+  digitalWrite(A4, HIGH);
+  delay(2000);
+  digitalWrite(A4, LOW);
+  delay(2000);
+  
+  digitalWrite(A3, HIGH);
+  delay(2000);
+  digitalWrite(A3, LOW);
+  delay(2000);
+
+
+  digitalWrite(A5, HIGH);
+    delay(INTERVALO);
+  digitalWrite(A5, LOW);
+  digitalWrite(A4, HIGH);
+    delay(INTERVALO);
+  digitalWrite(A4, LOW);
+  digitalWrite(A3, HIGH);
+    delay(INTERVALO);
+  digitalWrite(A3, LOW);
 
