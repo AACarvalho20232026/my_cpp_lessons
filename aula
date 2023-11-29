@@ -383,4 +383,45 @@ void loop()
   digitalWrite(A3, HIGH);
     delay(INTERVALO);
   digitalWrite(A3, LOW);
+.......................................................................................
 
+const int LED_RED_1 = 2;
+const int LED_YEL_1 = 3;
+const int LED_GRE_1 = 4;
+const int LED_RED_2 = 5;
+const int LED_YEL_3 = 6;
+const int LED_GRE_4 = 7;
+
+const long INTERVALO_SEG = 6000;
+const long INTERVALO = 5000;
+
+void setup()
+{
+  pinMode(LED_RED_1, OUTPUT);
+  pinMode(LED_YEL_1, OUTPUT);
+  pinMode(LED_GRE_1, OUTPUT);
+  pinMode(LED_RED_2, OUTPUT);
+  pinMode(LED_YEL_3, OUTPUT);
+  pinMode(LED_GRE_4, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(LED_RED_1, HIGH);
+  digitalWrite(LED_RED_2, HIGH);
+  delay(INTERVALO);
+  digitalWrite(LED_RED_1, LOW);
+  digitalWrite(LED_RED_2, LOW);
+
+  digitalWrite(LED_YEL_1, HIGH);
+  digitalWrite(LED_YEL_3, HIGH);
+  delay(INTERVALO);
+  digitalWrite(LED_YEL_1, LOW);
+  digitalWrite(LED_YEL_3, LOW);
+
+  digitalWrite(LED_GRE_1, HIGH);
+  digitalWrite(LED_GRE_4, HIGH);
+  delay(INTERVALO_SEG);
+  digitalWrite(LED_GRE_1, LOW);
+  digitalWrite(LED_GRE_4, LOW);
+}
