@@ -425,3 +425,32 @@ void loop()
   digitalWrite(LED_GRE_1, LOW);
   digitalWrite(LED_GRE_4, LOW);
 }
+...............................................................................................................
+int val = analogRead(A1);
+  val = map(val, 0, 1023, 255, 0);
+  analogWrite(3, val);
+...........................................................................
+Reference
+
+//Reference is an alias for a variable
+string food = "Pizza";
+//Create a Reference variable
+string &meal = food;
+int main(){
+    cout << food << "\n";
+    cout << &food << "\n";
+    cout << meal << "\n";
+    cout << &meal << "\n";
+    
+    return 0;
+}
+........................................................................................................
+pointer
+int main(){
+    string food = "Pizza";
+    string *ptr = &food;
+    cout << food << "\n";
+    cout << &food << "\n";
+    cout << ptr << "\n";
+    cout << *ptr << "\n";
+    cout << &ptr << "\n";
