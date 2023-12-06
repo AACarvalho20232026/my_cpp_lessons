@@ -454,3 +454,28 @@ int main(){
     cout << ptr << "\n";
     cout << *ptr << "\n";
     cout << &ptr << "\n";
+.............................................................
+revisoes 
+
+#include <iostream>
+using namespace std;
+
+int main(){
+
+    int x = 1;
+    int y = 2;
+    cout << x << "\n";
+    x +=2;
+    cout << x << "\n";
+    cout << (x!=y) << "\n";
+    cout << (x==y) << "\n";
+
+     //   &&        ||   !   == ! < > <= >=
+   // comparacao    ou   neg
+
+    string nomea = "Paulo ";
+    string nomeb = "Leite";
+    cout << nomea+nomeb << "\n";
+
+}
+cout << round(10.4) << "\n";
