@@ -384,6 +384,7 @@ void loop()
     delay(INTERVALO);
   digitalWrite(A3, LOW);
 .......................................................................................
+Semaforo
 
 const int LED_RED_1 = 2;
 const int LED_YEL_1 = 3;
@@ -446,6 +447,7 @@ int main(){
 }
 ........................................................................................................
 pointer
+
 int main(){
     string food = "Pizza";
     string *ptr = &food;
