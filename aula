@@ -508,3 +508,119 @@ int main(){
     return 0;
 
 }
+.........................................
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <cstdlib>
+#include <ctime>
+#include <algorithm>
+
+using namespace std;
+
+// Função para gerar números aleatórios
+int gerarNumeroAleatorio(int min, int max) {
+    return rand() % (max - min + 1) + min;
+}
+
+// Função para criar um cartão de bingo
+vector<vector<int>> criarCartaoBingo() {
+    vector<vector<int>> cartao(5, vector<int>(5, 0));
+
+    for (int i = 0; i < 5; ++i) {
+        for (int j = 0; j < 5; ++j) {
+            int numero;
+            do {
+                numero = gerarNumeroAleatorio(j * 15 + 1, (j + 1) * 15);
+            } while (find(cartao[i].begin(), cartao[i].end(), numero) != cartao[i].end());
+            cartao[i][j] = numero;
+        }
+    }
+
+    return cartao;
+}
+
+// Função para mostrar um cartão de bingo
+void mostrarCartao(const vector<vector<int>>& cartao) {
+    for (int i = 0; i < 5; ++i) {
+        for (int j = 0; j < 5; ++j) {
+            if (cartao[i][j] == 0) {
+                cout << "   ";
+            } else {
+                cout << (cartao[i][j] < 10 ? " " : "") << cartao[i][j] << " ";
+            }
+        }
+        cout << endl;
+    }
+}
+
+// Função para salvar um cartão em um arquivo
+void salvarCartao(const vector<vector<int>>& cartao, int numeroCartao) {
+    ofstream arquivo("cartao_" + to_string(numeroCartao) + ".txt");
+
+    for (int i = 0; i < 5; ++i) {
+        for (int j = 0; j < 5; ++j) {
+            arquivo << (cartao[i][j] == 0 ? "X" : to_string(cartao[i][j])) << " ";
+        }
+        arquivo << endl;
+    }
+
+    arquivo.close();
+}
+
+int main() {
+    srand(static_cast<unsigned int>(time(nullptr)));
+
+    int opcaoSorteio;
+    cout << "Escolha o tipo de sorteio (75, 90 ou 100): ";
+    cin >> opcaoSorteio;
+
+    vector<int> numerosSorteados;
+    int opcao;
+    cout << "Escolha o modo de sorteio (0 - Automático, 1 - Manual): ";
+    cin >> opcao;
+
+    int numeroAnterior = -1;
+
+    while (true) {
+        int numeroSorteado;
+
+        if (opcao == 0) {
+            numeroSorteado = gerarNumeroAleatorio(1, opcaoSorteio);
+        } else {
+            cout << "Pressione qualquer tecla para sortear um novo número...";
+            cin.ignore();
+            cin.get();
+            numeroSorteado = gerarNumeroAleatorio(1, opcaoSorteio);
+        }
+
+        // Exibir números sorteados
+        cout << "Número sorteado: " << numeroSorteado << endl;
+        cout << "Número anterior: " << numeroAnterior << endl;
+
+        numerosSorteados.push_back(numeroSorteado);
+        sort(numerosSorteados.begin(), numerosSorteados.end());
+
+        cout << "Números sorteados: ";
+        for (int num : numerosSorteados) {
+            cout << num << " ";
+        }
+        cout << endl;
+
+        numeroAnterior = numeroSorteado;
+
+        // Criar cartões de bingo
+        int numeroCartoes;
+        cout << "Quantos cartões de bingo desejas gerar? ";
+        cin >> numeroCartoes;
+
+        for (int i = 1; i <= numeroCartoes; ++i) {
+            vector<vector<int>> cartao = criarCartaoBingo();
+            mostrarCartao(cartao);
+            salvarCartao(cartao, i);
+        }
+    }
+
+    return 0;
+}
+
