@@ -852,6 +852,105 @@ int main(){
     */
     
 }
+....................................................................................................................................
+#include <iostream>
+
+using namespace std;
+
+void soma(int a, int b) {
+    cout << a + b << endl;
+}
+
+void multi(int a, int b) {
+    cout << a * b << endl;
+}
+
+void divi(int a, int b) {
+    if (b != 0) {
+        cout << a / b << endl;
+    } else {
+        cout << "Error: Cannot divide by zero." << endl;
+    }
+}
+
+void Rest(int a, int b) {
+    if (b != 0) {
+        cout << a % b << endl;
+    } else {
+        cout << "Error: Cannot find the remainder for division by zero." << endl;
+    }
+}
+
+void menu() {
+    system("clear");  // Corrected syntax for clearing the screen
+    cout << "====================" << endl;
+    cout << "          MENU" << endl;
+    cout << "====================" << endl;
+    cout << "1 - soma" << endl;
+    cout << "2 - multiplicacao" << endl;
+    cout << "3 - divisao" << endl;
+    cout << "4 - resto da divisao" << endl;
+    cout << "====================" << endl;
+}
+
+int getOpcao() {
+    int opcao;
+    cout << "Digite a sua opcao: ";
+    cin >> opcao;
+
+    return opcao;
+}
+
+int getValorX() {
+    int x;
+    cout << "Digite o valor de x: ";
+    cin >> x;
+
+    return x;
+}
+
+int getValorY() {
+    int y;
+    cout << "Digite o valor de y: ";
+    cin >> y;
+
+    return y;
+}
+
+void executaCalculo(int opcao, int x, int y) {
+    switch (opcao) {
+        case 1:
+            soma(x, y);
+            break;
+
+        case 2:
+            multi(x, y);
+            break;
+
+        case 3:
+            divi(x, y);
+            break;
+
+        case 4:
+            Rest(x, y);
+            break;
+
+        default:
+            cout << "Opcao invalida." << endl;
+    }
+}
+
+int main() {
+    int a, b, opcao;
+    menu();
+    opcao = getOpcao();
+    a = getValorX();
+    b = getValorY();
+    executaCalculo(opcao, a, b);
+
+    return 0;
+}
+
 
 
 
