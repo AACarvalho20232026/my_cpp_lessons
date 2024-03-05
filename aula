@@ -1189,6 +1189,68 @@ int main(){
     menu();
     return 0;
 }
+........................................
+cast 
+/*
+c++ program to demonstrate casting
+*/
+
+#include <iostream>
+using namespace std; 
+
+void showASCIITable() {
+    for (int x = 0; x <= 255; x++){
+        cout << "Valor: " << x << " , caracteres: " << (char)x << endl;
+    }
+}
+
+int main() {
+
+    int i = 10;
+    float f = 3.14;
+    char c = 'a';
+
+    //cast implicito
+    float f2 = i;   // tipo uma variavel dupla
+    char c2 = i;
+
+    cout << "f2: " << f2 << endl;
+    cout << "c2: " << c2 << endl;
+
+    //cast explicito
+    int i2 = (int)f; //vais fazer uma cast para um inteiro num float   
+    // int i2 = int(f); mesma coisa
+    int i3 = (int)c; //vais fazer uma cast para um inteiro num char
+
+    //cast de um inteiro para um char
+    char c3 = (char)i; 
+
+    cout << "i2: " << i2 << endl;
+    cout << "i3: " << i3 << endl;
+
+    return 0;
+}
+..............................
+ascii table
+/*
+c++ program to demonstrate casting
+*/
+
+#include <iostream>
+using namespace std; 
+
+void showASCIITable() {
+    for (int x = 20; x <= 255; x++){
+        cout << "Valor: " << x << " , caracteres: " << (char)x << endl;
+    }
+}
+
+int main() {
+
+    showASCIITable();
+
+    return 0;
+}
 
 
 
