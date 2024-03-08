@@ -1251,7 +1251,95 @@ int main() {
 
     return 0;
 }
+................................................
+            Revisoes cast 
+#include <iostream>
 
+using namespace std;
+
+int main(){
+
+int i = 1;
+float f = 2.1;
+
+float f2 = i;
+float x = (float)i;
+cout << (int)f << endl;
+
+string frase = "Ola este é o meu cast " + to_string(f);
+//cout << (float)i*f << endl;
+   // int xpto = 1;
+    //string n = to_string(xpto) << endl;
+
+int xpto1 = 1;
+int xpto2 = 2;
+string xpto3 = "Ola Mundo";
+
+cout << xpto1+xpto2 << endl;
+cout << to_string(xpto1) + to_string(xpto2) << endl;
+---------------------------------------
+#include <iostream>
+using namespace std;
+
+const float PI = 3.1415; // CONSTANTE GLOBAL
+float xpto = 2.3;        // variavel global
+
+int teste(int x){
+    //const int xpto = 3;
+    
+    return xpto;
+}
+
+int main (){
+    //int x = teste();
+    //cout << x<< endl;
+    cout << teste()*teste() << endl;
+}
+--------------------------------------
+A palavra-chave static pode ser usada para declarar variáveis
+​​e funções em escopo global, escopo de namespace e escopo de classe.
+Variáveis ​​estáticas também podem ser declaradas em escopo local.
+Duração estática significa que o objeto ou variável é alocado quando
+o programa é iniciado e desalocado quando o programa termina.
+-------------------------------------------
+#include <iostream>
+using namespace std;
+
+//const float PI = 3.1415; // CONSTANTE GLOBAL
+//float xpto = 2.3;        // variavel global
+
+const float PI = 3.1415;
+
+int teste(){
+   int xpto = 3;
+   //static int xpto = 3; // mesmo endereco de memoria
+    return xpto;
+}
+
+int main (){
+    //int x = teste();
+    //cout << x<< endl;
+    cout << teste()*teste() << endl;
+}
+.------------------------------------------
+#include <iostream>
+using namespace std;
+
+
+int main (){
+
+    for(int n=0; n<=10; n++){
+        cout << n << endl;
+    }
+    int x=0;
+    while (x<=10) {
+        cout << x << endl;
+        x++;
+        /* code */
+    }
+    
+}
+...........................
 
 
 
