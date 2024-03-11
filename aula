@@ -1341,6 +1341,111 @@ int main (){
 }
 ...........................
 
+#include <iostream>
+
+using namespace std;
+
+int x = 10;
+
+namespace xpto{
+    void func()  {
+  
+    cout << "xpto1" << endl;
+    }   
+    namespace xpto2{   //nasted Nested Loop in C++ When one loop resides inside another loop is called nesting. When we loop two loops together, i.e. kind of nesting, then the outer loop takes control of the number of times the inner loop works and takes care of all manipulation and computation.
+        void func(){
+            cout << "xpto2" << endl;
+        }
+    }
+}
+
+
+
+
+namespace first_space // declara namespace / isola namespace do resto do codigo
+{
+    void func()
+    {
+        cout << "Inside first_space" << endl;
+    }
+}
+
+namespace second_space
+{
+    void func()
+    {
+        cout << "Inside second_space" << endl;
+    }
+}
+
+using namespace xpto ;
+
+int main ()
+{
+    cout << x << endl;
+    
+    xpto::func();
+    second_space::func();
+    first_space::func();
+    return 0;
+}
+.......................................................
+
+#include <iostream>
+
+using namespace std;
+
+namespace a{
+    int x = 20;
+    void func(){
+        cout << "xpto" << endl;
+    }
+
+    namespace b{
+        void func(){
+            cout << " f1 Inside first_space" endl;
+     }
+    }
+}
+int x = 10;
+
+namespace xpto{
+    void func()  {
+  
+    cout << "xpto1" << endl;
+    }   
+    namespace xpto2{   //nasted Nested Loop in C++ When one loop resides inside another loop is called nesting. When we loop two loops together, i.e. kind of nesting, then the outer loop takes control of the number of times the inner loop works and takes care of all manipulation and computation.
+        void func(){
+            cout << "xpto2" << endl;
+        }
+    }
+}
+
+namespace first_space // declara namespace / isola namespace do resto do codigo
+{
+    void func()
+    {
+        cout << "Inside first_space" << endl;
+    }
+}
+
+namespace second_space
+{
+    void func()
+    {
+        cout << "Inside second_space" << endl;
+    }
+}
+
+using namespace xpto ;
+
+int main ()
+{
+    cout << xpto::x << "\n";
+    return 0;
+}
+-----------------------------------------------------
+
 
 
 
