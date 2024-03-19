@@ -1508,7 +1508,101 @@ void fallowLine(){
 void setup(){
 
 }
+..........................
+/*
+ _     _____     ___     ____  ____  ___ __  __ _____ ___ ____   ___  
+| |   | ____|   / _ \   |  _ \|  _ \|_ _|  \/  | ____|_ _|  _ \ / _ \ 
+| |   |  _|    | | | |  | |_) | |_) || || |\/| |  _|  | || |_) | | | |
+| |___| |___   | |_| |  |  __/|  _ < | || |  | | |___ | ||  _ <| |_| |
+|_____|_____|   \___/   |_|   |_| \_\___|_|  |_|_____|___|_| \_\\___/ 
+                                                                    
+  ____ ___  __  __ __  __ _____ _   _ _____ 
+ / ___/ _ \|  \/  |  \/  | ____| \ | |_   _|
+| |  | | | | |\/| | |\/| |  _| |  \| | | |  
+| |__| |_| | |  | | |  | | |___| |\  | | |  
+ \____\___/|_|  |_|_|  |_|_____|_| \_| |_| 
+ */
+// Está ai oque o prof pediu mais ou menos explicado em codigo so nao tem os cast
+// O codigo funciona ao ser executado mas nao esta funcional, é apenas um codigo para lerem de exemplo
 
+
+
+// estrutura basica
+
+#include <iostream>
+
+//namespace std;
+using namespace std;
+
+// variavel global/ array global e dimensional
+int var[2][2] = {{1,2},{3,4}};
+// const global
+const int con = 20;
+
+void funcaofor(){
+    for (int i = 0; i < 2; i+=1)// soma e armazena na variavel (i+=1) o mesmo que a iteração
+    {
+        for (int f = 0; f < 2; f++ )// iteração (f++)
+        {
+            cout << var[i][f] << "\n"; // 2 for que lêm os valores do array bidimensional um para a linha outro para a coluna
+        }
+    
+    }
+    
+}
+// operações basicas *, /, +, -, %2(resto da divisão por 2)
+// função de operaçoes basicas que vai dar return do valor c, 
+int funcao2(int a, int b){// parametros, é obrigatorio declarar o valor destas variaveis quando esta função for declarada no main
+    int c = a+b;
+    return c;
+    
+}
+void funcswitch(){
+    int parametroif = 0; // é sempre bom declarar as variaveis como zero para eleminarem os valores armazenados caso tenham para nao dar erros no programa
+    int switchcase = 0;
+    cout << "qual o valor de switch case: 1/2: ";
+    cin >> switchcase;
+    switch (switchcase) // o que ele ira analisar, funcionamento parecido ao if, else if, e else sendo o else o default;
+    {
+    case 1:
+        parametroif = 0;
+        while (true) // enquanto while for = true o codigo se repetirá
+        {   
+            cout << "valor de parametroif: " << parametroif << "\n";
+            if (parametroif == 3)
+            {
+                break;// da para dar break em whiles tbm, da pra dar break em todos os ciclos, ele para o ciclo
+            }
+            parametroif++;
+        }
+        break; // break para o codigo apos o case ser executado
+    case 2:
+        parametroif = 0;
+        do // faz e so depois verifica se é verdade se nao for faz uma vez e para
+        {
+            {
+            if (parametroif == 3) 
+
+                break;
+            }
+            parametroif++; // iteração
+        }while (true);
+        break;
+    default:
+        cout << "default" << endl;
+        break;
+    }
+    
+}
+
+int main(){
+    //invocação das variaveis
+    funcaofor();
+    cout << funcao2(10, 5) << endl;// 10 é a varialvel "a" e 5 é a variavel "b"
+    funcswitch();
+
+    return 0;
+}
 
 
 
