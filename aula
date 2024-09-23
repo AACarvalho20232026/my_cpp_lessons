@@ -1603,6 +1603,102 @@ int main(){
 
     return 0;
 }
+-------------------------------------------------------------------------------------
+int soma (int lista[]){
+
+float soma = 0;
+for (int i = 0; i < 5; i++){
+    soma += list[i];
+}
+return (int)soma;
+
+}
+----------------------------------------------------------------------------------
+
+float soma (float x , float y = 10.2){
 
 
 
+    return x+y;
+}
+---------------------------------------------------------------------------------------
+int soma (int x , int y){
+    return x + y;
+}
+
+float soma (float x , float y){
+    return x + y;
+}
+
+double soma (double x , double y){
+    return x + y;
+}
+--------------------------------------------------------------------------------------------
+overtune
+
+int soma (int x , int y){
+    return x + y;
+}
+
+float soma (float x , float y){
+    return x + y;
+}
+
+double soma (double x , double y){
+    return x + y;
+}
+................................................................
+ scope
+int x = 0;
+
+int soma (){
+    int y = x + 1;
+    return y;
+}
+
+int main(){
+    cout << soma() << endl;
+    return 0;
+}
+-------------------------------------------------------------------
+ recursamento
+int sum(int k){
+ if (k > 0) {
+    return k + sum (k - 1);
+ } else {
+    return 0;
+ }
+}
+
+int main() {
+    int result = sum(10);
+    cout << result;
+    return 0;
+}
+------------------------------------------------------------------------
+//object 
+class Carro{
+public:                       // access specifier
+    int anos;                // attribute (int variable)
+    string marca;             // atribute (string variable)
+    void setvelocidade(int v){
+        velocidade = v;
+    }
+
+private:
+    int velocidade; // attribute (int variable)
+    void setVelMedia(int vm){
+        int velMedia = vm;
+    }
+
+};
+
+int main(){
+
+    Carro carro1;
+    carro1.setvelocidade(100);
+    carro1.anos = 15;
+    carro1.marca = "Ford";
+
+    return 0;
+}
