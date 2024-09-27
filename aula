@@ -1702,3 +1702,43 @@ int main(){
 
     return 0;
 }
+---------------------------------------------------------------------------------------------------
+__________________________________Inicio _______________________________         CRUD                    
+         |                          db                |                |
+                                                                       |
+        sim                                          nao               |
+         |                                             |               |
+        MENU                                   no          yes         |
+    (listagem)                                   |           |         |
+     
+   (id)                                        exit        criar db  _ |
+    consultar                                                          
+
+_________________________________________________
+c.s.v
+10,feijao , 10 , 2.0
+
+cost_produtos id
+
+->indice
+->nome
+->preço
+->quantidade
+ status (a - ativo, d - apagado , o, out of stock , )
+____________________________________________________
+menu
+listar produtos
+consultar um indice em especifico (product_id)
+ex:
+pode exitir ou nao 17(input)
+      |         |
+    mostrar    exit
+
+UPDATE =/= DELETE
+
+tip : db todo para array e alterar por lá
+
+----------------------------------------
+  !!!!!!!!!! ESTUDAR A LEITURA E ESCRITA DE FICHEIROS!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!! FAZER FICHEIRO PEQUENO A PARTE PARA TESTES!!!!!!!!!!!!!!!!!!
+
