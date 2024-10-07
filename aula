@@ -1741,4 +1741,33 @@ tip : db todo para array e alterar por lá
 ----------------------------------------
   !!!!!!!!!! ESTUDAR A LEITURA E ESCRITA DE FICHEIROS!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!! FAZER FICHEIRO PEQUENO A PARTE PARA TESTES!!!!!!!!!!!!!!!!!!
+----------------------------------------------------------------------------------------
+Classe sempre em Letra grande
+objeto :
 
+metodo(verbos) - ligar , andar
+
+atributos(adjetivos/caracteristicas) - cor , 4 portas
+
+publico - quando instanciar(criar objeto apartir da classe) o objeto vou ter logo acesso direto ao metodos e atributos publicos
+
+private -
+
+tip : string é uma classe (conjunto de char)
+
+trabalho : desenhe classe chamada fatura (atributos - int numero , string nome , int c.c(contribuinte) , valor ) e metedos (criar fatura , inprimir fatura no ecra )
+
+class Bolo{
+ private:
+    double TempoiCoz;
+    double
+
+this->ingredientes[] = ingredientes [] // segundo ingrediente diz os parametros
+
+estancia de uma class é um obj
+
+THIS: serve para dizer que a variavel esta dentro da funcao
+PUBLIC: os membros são acessíveis de fora da classe
+PRIVATE: membros não podem ser acessados  (ou visualizados) de fora da classe
+PROTECTED: significa que não é acessivel de fora mas a classe filha tem acesso
+ENCAPSULAMENTO: serve para proteger os daods para nao serem anulados
