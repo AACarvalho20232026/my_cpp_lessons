@@ -1798,3 +1798,172 @@ atributos:  all private  struct
 -fans
 
 Hardware -> constructor
+-------------------------------------------------------
+#include <iostream>
+using namespace std;
+
+struct hardware{
+    string ram;
+    string gpu;
+    string cpu;
+    string psu;
+    string caixa;
+    string mb;
+    string hd;
+    string fans;
+    char perifericos[5];
+};
+
+class Computer {
+
+    private:
+
+        hardware computer;
+        bool state;
+
+        void Formatar(){
+            cout << "O computador vai ser formatado!" << endl;
+        };
+
+        void AbrirPasta(){
+            cout << "A pasta do computador foi aberta!" << endl;
+        };
+
+        void IniciarSO(){
+            cout << "O sistema operativo esta a ser iniciado!" << endl;
+        };
+
+        void IniciarGPU(){
+            cout << "A placa grafica esta a ser iniciada!" << endl;
+        };
+
+        void RemoverFicheiro(){
+            cout << "O ficheiro vai ser removido" << endl;
+        };
+
+        void listarHardware(){
+            cout << endl;
+            cout << "Hardware do computador: " << endl;
+            cout << "RAM: " << computer.ram << endl;
+            cout << "GPU: " << computer.gpu << endl;
+            cout << "CPU: " << computer.cpu << endl;
+            cout << "PSU: " << computer.psu << endl;
+            cout << "Caixa: " << computer.caixa << endl;
+            cout << "MotherBoard: " << computer.mb << endl;
+            cout << "Disco: " << computer.hd << endl;
+            cout << "FANs: " << computer.fans << endl;
+            cout << "Perifericos" ;
+            for(int i = 0; i < 5 ; i++){
+                cout << "\t";
+                cout << computer.perifericos[i];
+            }
+            cout << endl;
+            cout << endl;
+        }
+    public:
+
+        Computer(hardware hardware){  // constructor
+
+        this->computer = hardware; // ocultar oq esta dentro da classe
+        this->state = false;
+        cout << "O computador foi instanciado com sucesso! tem de ligar..\n";
+        listarHardware();
+ 
+       }
+
+       void Ligar(){
+            if(state){
+                cout << "O computador ja esta ligado!" << endl;
+            }else{
+                cout << "O computador vai ligar" << endl;
+                this->state = true;
+            }
+       };
+
+       void Desligar(){
+        if(state){
+            cout << "O computador ja esta desligado!"
+            this->state = false;
+        }else{
+            cout << "O computador ja esta desligado!"
+        }
+       };
+
+       void Reset(){
+            if(state){
+                cout << "O computador vai ser reiniciado!" << endl;
+            }else{
+                cout << "O computador vai nao esta ligado!" << endl;
+            }
+        };
+
+        void AbrirTampa(){
+            cout << "A tampa do computador foi aberta!" << endl;
+        };
+
+        void Executar(int opt){
+
+            switch (opt){
+            case 1:
+                if(state){
+                    Formatar();
+                }else{
+                    cout << "O computador nao esta ligado!" << endl;
+                }
+                break;
+                case 2:
+                if(state){
+                    AbrirPasta();
+                }else{
+                    cout << "O computador nao esta ligado!" << endl;
+                }
+                break;
+                case 3:
+                if(state){
+                    RemoverFicheiro();
+                }else{
+                    cout << "O computador nao esta ligado!" << endl;
+                }
+                break;
+            default:
+                cout << "Opçao invalida!" << endl;
+                break;
+            }
+        };
+
+        void Inputs(string input){
+            if(state){
+                cout << "O computador esta a receber o input: "; << endl;
+            }else{
+                cout << "O computador nao esta ligado!" << endl;
+            }
+        };
+};
+
+int main(){
+
+    hardware hardware1 = {"16GB", "RTX 3090", "i9 10900k", "1000W", "Corsair 4000D", "ASUS ROG strix z490-e", "1TB SSD", "Corsair LL120",{'M','K','R','J','L'}};
+
+    hardware hardware2 = {"32GB", "RTX 3080", "i5 10900k", "1200W", "Corsair 4000E", "ASUS ROG strix z590-e", "2TB SSD", "Corsair LL122",{'M','D','R','I','L'}}
+
+    Computer computer1(hardware1);
+    Computer computer2(hardware2);
+
+
+
+}
+
+
+
+        }
+
+
+
+
+        
+
+
+
+
+}
+
