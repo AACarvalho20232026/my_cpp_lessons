@@ -1771,3 +1771,30 @@ PUBLIC: os membros são acessíveis de fora da classe
 PRIVATE: membros não podem ser acessados  (ou visualizados) de fora da classe
 PROTECTED: significa que não é acessivel de fora mas a classe filha tem acesso
 ENCAPSULAMENTO: serve para proteger os daods para nao serem anulados
+
+
+computador
+metedo : 
+-ligar/desligar bool  /  Publico
+-reniciar  /  Publico
+-abrir tampa  /  Publico
+-executar um programa  /  Publico
+-inicar s.o  /  Privado  -> construct
+-iniciar gpu  /  Privado -> construct
+-remover ficheiro  /  Privado
+- inputs  /  publico = dados de fora pra dentro
+-formatar  /  Privado
+-abrir pastas  /  Privado
+
+atributos:  all private  struct
+-RAM
+-placa grafica
+-cpu
+-psu
+-caixa
+-motherboard
+-disco rigido
+-dispositivos externos
+-fans
+
+Hardware -> constructor
