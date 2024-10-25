@@ -1965,3 +1965,24 @@ header = condiçao if = evita que usa codigo repetido
 __________________________________________________________
 destructor 
 ~Refrige();
+____________________________________________
+class = ambiente fechado
+_________________
+#include "refrige.h"
+_____________
+ficheiro cpp = implementa 
+.h = declara
+_________________________________________________________
+
+Refrige::Refrige = interligaçao , porta com outra class de um ficheiro para o outro
+
+_________________________________________________
+< e > em bibliotecas = nativas
+
+:: = referencia
+_____________________________
+#ifndef HELLOWORLD.H
+#define HELLOWORLD.H
+#endif
+
+so em programas grande!!!!!!!!!!!!!z\
