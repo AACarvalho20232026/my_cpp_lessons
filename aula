@@ -1986,3 +1986,26 @@ _____________________________
 #endif
 
 so em programas grande!!!!!!!!!!!!!z\
+______________
+compilaçao geral
+
+c++ -o xpto *.cpp
+_________________________
+carro.h coisa abstrata
+_________________________________________________________
+protected: // herança entre classes nao passa
+
+
+main()
+
+a xpto();
+
+classe a
+public :
+x=10;
+private:
+Y= 20;
+protected:
+z=10
+
+
