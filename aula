@@ -2008,4 +2008,62 @@ Y= 20;
 protected:
 z=10
 
+________________________________________
+
+O tratamento de exceção em C++ consiste em três palavras-chave: try,, , - A , de frente para o que sobre o que sobre, , sobre o que sobre o throwE a catch:
+
+O que é tryA instrução permite definir um bloco de código para ser testados quanto a erros enquanto ele está sendo executado.
+
+O que é throwpalavra-chave lança uma exceção quando a O problema é detectado, o que nos permite criar um erro personalizado.
+
+O que é catchA instrução permite que você defina um bloco de código para ser executado, se ocorrer um erro no bloco try.
+
+O que é tryE a catchpalavras-chave Venha em pares:
+
+exemplo:
+
+try {
+  int age = 15;
+  if (age >= 18) {
+    cout << "Access granted - you are old enough.";
+  } else {
+    throw (age);
+  }
+}
+catch (int myNum) {
+  cout << "Access denied - You must be at least 18 years old.\n";
+  cout << "Age is: " << myNum;
+} 
+
+_________________________________
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main() {
+    system("clear");
+
+    string nomeFicheiro;
+    cout << "Nome do Ficheiro: ";
+    cin >> nomeFicheiro;
+ 
+    while(true){}
+    try {
+        ifstream file(nomeFicheiro);
+        if (!file.is_open()) {
+            throw "O ficheiro nao existe";
+        }
+        throw " O ficheiro foi aberto com sucesso";
+        
+    } catch (const char* e) {
+        cout << e << endl;
+        
+    }
+
+    return 0;
+}
+___________________________________
+c++ unica lingua que consegue manipular endereço de memoria
+
 
