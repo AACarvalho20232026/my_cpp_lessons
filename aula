@@ -2121,4 +2121,40 @@ if (a >=5 || b >= 5){
     return 0;
 }
 
+____________________________________
+enum = Uma enumeração é um tipo definido pelo usuário que consiste em um conjunto de constantes integrais nomeadas que são conhecidas como enumeradores.
 
+/ unscoped enum:
+// enum [identifier] [: type] {enum-list};
+
+// scoped enum:
+// enum [class|struct] [identifier] [: type] {enum-list};
+
+// Forward declaration of enumerations  (C++11):
+enum A : int;          // non-scoped enum must have type specified
+enum class B;          // scoped enum defaults to int but ...
+enum class C : short;  // ... may have any integral underlying type
+
+enum Cores{
+    VERMELHO,
+    VERDE,
+    AZUL
+};
+________________________________________________________________________
+FUNCAO RECURSIVA : FUNCAO QUE SE CHAMA A SI PROPRIA
+
+Recursividade é o mecanismo de programação no qual uma definição de função ou de outro objeto refere-se ao próprio objeto sendo definido. Assim função recursiva é uma função que é definida em termos de si mesma.
+
+int sum(int k) {
+    if (k > 0) {
+        return k + sum(k - 1);
+} else {    
+    return 0;
+ }
+}
+
+int main(){
+ int result = sum(10);
+cout << result;
+return 0;
+}
