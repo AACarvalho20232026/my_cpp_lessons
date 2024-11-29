@@ -2204,3 +2204,121 @@ cout << asctime(myTime);
 
     return 0;
 }
+______________________________________________________________
+vector
+
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+vector<int> numeros = {6, 7, 3, 2, 9};
+
+int myArr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+
+int main(){
+
+    for (int num : numeros){
+        cout << num << "\n";
+    }
+
+    for(int i = 0; i < 10; i++){
+        cout << num << "\n";
+    }
+
+cout << numeros.front() << endl; // simplica a escolha em array
+
+}
+
+_______________________________________________________
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+struct pessoa {
+    string nome;
+    int idade;
+};
+
+vector<pessoa> xpto;
+_____________________________________________
+
+            list  // igual ao vector soq n podes importar os indices
+
+#include <iostream>
+#include <vector>
+#include <list>
+
+list<int> lista = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+using namespace std;
+
+int main(){
+
+lista.
+}
+
+__________________
+
+FIFO - FIRST IN FIRST OUT
+FILO - FIRST IN LAST OUT 
+LILO - Last in last out
+___________________________
+stack  == ta optomizado em lifo
+
+#include <iostream>
+#include <vector>
+#include <stack>
+
+using namespace std
+
+
+
+_______________________________________
+
+ vector                lista                    stack
+1º                       1º                      1º
+last                    last                    last
+                                                filo
+
+______________________________________
+
+        queue === fifo
+
+__________________
+set  = ordenado auto em forma ascendente 
+nao admite elementos duplicados
+
+conjunto de coisas unicas
+
+nao pode alterar seu valor
+
+pode adicionar e remover
+_________________________________________
+<map> === dictionary
+
+dois elementos relacionados uns com outro
+
+map<string, int> map = {
+
+{"um", 1},
+{"dois", 2},
+{"tres", 3},
+{"quatro", 4},
+{"cinco", 5},
+{"seis", 6},
+{"sete", 7},
+{"oito", 8},
+{"nove", 9},
+{"dez", 10},
+};
+
+using namespace std;
+
+int main(){
+
+cout << mapa["um"] << endl;
