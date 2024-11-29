@@ -2158,3 +2158,49 @@ int main(){
 cout << result;
 return 0;
 }
+__________________________________
+#include <iostream>
+#include <ctime>
+#include <unistd.h>
+
+using namespace std;
+
+struct tm datatime;
+time_t timestamp; // guarda a variavel timestamp o valor de segundos desde x time ago
+
+int main() {
+
+datatime.tm_year = 1900;
+datatime.tm_mon = 1;
+datatime.tm_mday = 1;
+datatime.tm_hour = 1;
+datatime.tm_min = 1;
+datatime.tm_sec = 1;
+
+datatime.tm_isdst = -1;
+timestamp = mktime(&datetime);
+cout << ctime(&timestamp);
+
+    return 0;
+}
+_________________________________________________
+#include <iostream>
+#include <ctime>
+#include <unistd.h>
+
+using namespace std;
+
+
+
+int main() {
+
+long ttttt = 172857832;
+time_t xpto;
+time(&xpto);
+cout << xpto << endl;
+struct tm * myTime = localtime(&ttttt);
+cout << myTime -> tm_yday << endl;
+cout << asctime(myTime);
+
+    return 0;
+}
