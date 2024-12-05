@@ -2352,3 +2352,69 @@ int main(){
 
 
 }
+_____________________________________
+int main(){
+
+    cout << "paula" << "\b" << "o" << "\n";
+
+    return 0;
+_______________________
+\a 	audible bell 	
+\b 	backspace 	
+\f 	form feed - new page 	
+\n 	line feed - new line 	
+\r 	carriage return 	
+\t 	horizontal tab 	
+\v 	vertical tab 	
+
+\\ -> usa para o compilador nao ficar doido e pensar que é um escape character
+
+__________________
+qualquer letra minuscula -32 da maiusculo
+
+___________________________________
+#include <iostream>
+
+using namespace std;
+
+
+int main(){
+
+    char a;
+    cout << "digite uma letra minuscula: ";
+    cin >> a;
+
+cout << "Letra " << a << "Em maiuscula é " << (char)(a - 32) << endl;
+
+   
+    return 0;
+}
+_________________________________
+
+#include <iostream>
+
+using namespace std;
+
+void equacaoA(){
+float x1 , x2 , y1 , y2;
+cin >> x1 >> x2 >> y1 >> y2;
+
+cout << "(x1+x2)/2" << (x1 + x2)/2 << endl;
+cout << "(y1 + y2)/2" << (y1 + y2)/2 << endl;
+
+cout << "vector saida: " << "(" << (x1 + x2)/2 << "," << (y1 + y2)/2 << ")" << endl;
+
+
+
+
+
+}
+
+
+
+int main(){
+
+  
+    return 0;
+}
+_______________________________________
