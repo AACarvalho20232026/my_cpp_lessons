@@ -2322,3 +2322,33 @@ using namespace std;
 int main(){
 
 cout << mapa["um"] << endl;
+______________________________________________________
+#include <iostream>
+
+using namespace std;
+
+
+  Normal
+string name = "Paulo";
+int numero = 123;
+float num = 3.14;
+
+
+   Auto  // detecta o tipo de variaveis
+auto name = "Paulo";
+auto numero = 123;
+auto num = 3.14;
+
+
+//"_" -> biblioteca
+// "__" -> compilador
+
+unsigned int altura = 10;
+
+//unsigned nao podes ter valores negativos
+
+int main(){
+
+
+
+}
