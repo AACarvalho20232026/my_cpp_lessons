@@ -2551,3 +2551,5 @@ int main(){
 graficoHorizontal(200,100,500) ;
   return 0;
 }  
+______________________________________________
+Parametrização é o processo de decisão e definição dos parâmetros necessários para uma especificação completa ou relevante de um modelo ou objeto geométrico.
